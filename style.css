@@ -1,0 +1,49 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* regole macro */
+
+.container {
+  background-color: grey;
+  height: calc(100vh - 100px);
+  position: relative;
+}
+
+
+.aside-section {
+  background-color: blue;
+  height: calc(100vh - 100px);
+  width: 300px;
+  float:left;
+}
+
+
+.center-section {
+  background-color: lightblue;
+  height: 100%;
+  width: calc(100% - 300px);
+  float: right;
+}
+
+.bottom-section {
+  background-color: darkgrey;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+
+}
+
+
+/* regole sezioni centrali */
+
+#getpremium {
+  background-color: lightyellow;
+  height: 100px;
+  position: fixed;
+  top: 0px;
+  z-index: 10000;
+}
