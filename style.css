@@ -4,46 +4,135 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9em;
+  font-weight: normal;
+}
+
+
+
+/* da dare al contenitore per centrare verticalmente */
+.aline-center {
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+
+/* grandezza icone di base */
+.icon-size {
+  height: 28px;
+}
+
+/* per i testi associati vicino a icona o immagine */
+.margin-left {
+  margin-left: 15px;
+}
+
+/* utility */
+
+.margin-text {
+  margin: 10px 0px;
+
+}
 
 /* regole macro */
 
 .container {
-  background-color: grey;
-  height: calc(100vh - 100px);
-  position: relative;
+  /* background-color: grey; */
+  height: calc(100vh - 89px);
 }
 
 
 .aside-section {
   background-color: blue;
-  height: calc(100vh - 100px);
-  width: 300px;
-  float:left;
+  height: 100%;
+  width: 240px;
+  float: left;
 }
 
 
 .center-section {
   background-color: lightblue;
   height: 100%;
-  width: calc(100% - 300px);
+  width: calc(100% - 240px);
   float: right;
 }
 
 .bottom-section {
   background-color: darkgrey;
-  height: 100px;
+  height: 89px;
   width: 100%;
   position: fixed;
-
+  z-index: 100;
 }
+
+
 
 
 /* regole sezioni centrali */
 
-#getpremium {
-  background-color: lightyellow;
-  height: 100px;
+.getpremium {
+  background-color: violet;
+  height: 89px;
+  width: calc(100% - 240px);
   position: fixed;
   top: 0px;
-  z-index: 10000;
+  right: 0px;
+  z-index: 80;
+}
+
+
+
+/* sezione aside */
+
+#menu-aside {
+ background-color: lightblue;
+ height: 200px;
+ width: 95%;
+ margin-right: 5%;
+ margin-top: 20px;
+ padding-left: 20px;
+}
+
+.menu-aside-logo{
+  background-color: black;
+  /* height: 40px; */
+  width: 100%;
+}
+
+.menu-aside-logo img{
+  width: 150px;
+  margin: 5px 0px;
+}
+
+.menu-aside-ul, .menu-playlist-aside {
+  list-style: none;
+}
+
+.margin-text li{
+  margin: 10px 0px;
+}
+
+#playlist-aside {
+ background-color: lightyellow;
+ width: 80%;
+ padding-left: 20px;
+}
+
+#user-footer {
+ background-color: lightgreen;
+ height: 50px;
+ width: 80%;
+  padding-left: 20px;
+}
+
+
+.addplaylist p{
+  background-color: lightgrey;
+  margin: 6px 9px;
+  padding-left: 4px;
+  transform: scale(2);
+  width: 17px;
+  height: 17px;
 }
