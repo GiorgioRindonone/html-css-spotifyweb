@@ -19,9 +19,13 @@ flex-direction: row;
 align-items: center;
 }
 
-/* grandezza icone di base */
+/* grandezza icone e immagini */
 .icon-size {
   height: 28px;
+}
+
+.album-listening {
+  height: 40px;
 }
 
 /* per i testi associati vicino a icona o immagine */
@@ -33,7 +37,21 @@ align-items: center;
 
 .margin-text {
   margin: 10px 0px;
+}
 
+.truncate {
+  text-overflow: ellipsis;
+  /* Needed to make it work */
+  overflow: hidden;
+  white-space: nowrap;
+}
+/* per scrollare */
+.oveflow-auto{
+  overflow: auto;
+}
+/* da dare al padre */
+.overflow-hidden{
+  overflow: hidden;
 }
 
 /* regole macro */
@@ -41,6 +59,8 @@ align-items: center;
 .container {
   /* background-color: grey; */
   height: calc(100vh - 89px);
+  display: flex;
+  flex-direction: row;
 }
 
 
@@ -48,7 +68,8 @@ align-items: center;
   background-color: blue;
   height: 100%;
   width: 240px;
-  float: left;
+  /* float: left; */
+  z-index: 500;
 }
 
 
@@ -56,15 +77,15 @@ align-items: center;
   background-color: lightblue;
   height: 100%;
   width: calc(100% - 240px);
-  float: right;
+  /* float: right; */
 }
 
 .bottom-section {
   background-color: darkgrey;
   height: 89px;
-  width: 100%;
+  width: 100vh;
   position: fixed;
-  z-index: 100;
+  z-index: 10;
 }
 
 
@@ -79,7 +100,7 @@ align-items: center;
   position: fixed;
   top: 0px;
   right: 0px;
-  z-index: 80;
+  z-index: 8;
 }
 
 
@@ -125,6 +146,7 @@ align-items: center;
  height: 50px;
  width: 80%;
   padding-left: 20px;
+  position: sticky
 }
 
 
@@ -135,4 +157,16 @@ align-items: center;
   transform: scale(2);
   width: 17px;
   height: 17px;
+}
+
+/* sezione bottom */
+
+#bottom-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#left-footer {
+
 }
