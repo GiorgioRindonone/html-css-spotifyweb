@@ -10,7 +10,16 @@ body {
   font-weight: normal;
 }
 
+/* INTERAZIONI */
 
+.menu-active-li::after{
+  content: "";
+  display: block;
+  height: 2px;
+  width: 30px;
+  background-color: lightgreen;
+  margin: 3px auto;
+}
 
 /* da dare al contenitore per centrare verticalmente */
 .aline-center {
@@ -45,50 +54,57 @@ align-items: center;
   overflow: hidden;
   white-space: nowrap;
 }
-/* per scrollare */
-.oveflow-auto{
-  overflow: auto;
-}
-/* da dare al padre */
-.overflow-hidden{
-  overflow: hidden;
+
+.margin-bordi{
+  margin: 0px 20px;
 }
 
 /* regole macro */
 
-.container {
-  /* background-color: grey; */
+/* .container {
+
   height: calc(100vh - 89px);
   display: flex;
   flex-direction: row;
-}
+} */
 
 
-.aside-section {
+#aside-section {
   background-color: blue;
-  height: 100%;
+  height: calc(100vh - 89px);
+float: left;
   width: 240px;
-  /* float: left; */
-  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
 }
 
 
-.center-section {
+#center-section {
   background-color: lightblue;
-  height: 100%;
+  height: calc(100vh - 89px);
+
   width: calc(100% - 240px);
-  /* float: right; */
+  float: right;
+  overflow-y: auto;
+  z-index: 5;
 }
 
-.bottom-section {
-  background-color: darkgrey;
+#bottom-section {
+  /* background-color:  #282828; */
+  border: red 1px solid;
   height: 89px;
-  width: 100vh;
+  width: 100%;
   position: fixed;
+  bottom: 0;
   z-index: 10;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-
+/* #bottom-section {
+} */
 
 
 /* regole sezioni centrali */
@@ -100,9 +116,7 @@ align-items: center;
   position: fixed;
   top: 0px;
   right: 0px;
-  z-index: 8;
 }
-
 
 
 /* sezione aside */
@@ -114,6 +128,7 @@ align-items: center;
  margin-right: 5%;
  margin-top: 20px;
  padding-left: 20px;
+ flex-shrink: 0;
 }
 
 .menu-aside-logo{
@@ -127,7 +142,7 @@ align-items: center;
   margin: 5px 0px;
 }
 
-.menu-aside-ul, .menu-playlist-aside {
+.menu-aside-ul, .menu-playlist-aside, .menu-center-ul {
   list-style: none;
 }
 
@@ -139,14 +154,46 @@ align-items: center;
  background-color: lightyellow;
  width: 80%;
  padding-left: 20px;
+ /* height: calc(100% - 280px) ; */
+ height: 100%;
+ overflow: hidden;
+}
+
+/* #playlist-aside ul {
+  overflow: auto;
+  height: 300px;
+
+} */
+.menu-playlist-aside {
+  overflow-y:  auto;
+  height: calc(100%-50px);
 }
 
 #user-footer {
  background-color: lightgreen;
- height: 50px;
- width: 80%;
-  padding-left: 20px;
-  position: sticky
+ height: 90px;
+ width: 95%;
+ padding-left: 20px;
+ flex-shrink: 0;
+}
+
+#user-footer button{
+  background-color: rgba(255, 0, 0, 0.0);
+  border: 0;
+}
+
+#user-footer img{
+  background-color: rgba(255, 0, 0, 0.0);
+  border: 2px;
+padding: 3px;
+  border-radius: 50%;
+  background-color: grey;
+}
+
+.user-install, .user-profile {
+  display:  flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 
@@ -159,13 +206,78 @@ align-items: center;
   height: 17px;
 }
 
+/* .menu-playlist-aside {
+ overflow: auto;
+
+} */
+
+/* SEZIONE BANNER */
+
+#getpremium button {
+  float: right;
+  margin: 24px 5px;
+  padding: 10px 30px;
+  border: 2px white solid;
+  border-radius: 15px;
+  background-color: rgba(255, 0, 0, 0.0);
+}
+
+
+/* SEZIONE CENTRALE */
+
+#menu-center{
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+#menu-center ul{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+#menu-center ul li{
+margin: 10px 10px;
+}
+
+
+.recently-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.recently-album{
+  display: flex;
+  align-items: center;
+  flex-direction:column;
+  margin: 0px 10px;
+  height: 350px;
+  width: 250px;
+
+}
+
+.recently-album > *{
+  margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  overflow: hidden;
+}
+
+.recently-album h4{
+  font-size: 1.1em;
+}
+
+.recently-album img {
+  width: 250px;
+}
+
 /* sezione bottom */
 
-#bottom-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 
 #left-footer {
 
