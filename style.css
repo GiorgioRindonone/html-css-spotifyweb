@@ -8,6 +8,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.9em;
   font-weight: normal;
+
 }
 
 
@@ -23,10 +24,21 @@ body {
   margin: 3px auto;
 }
 
+#active-voice {
+  border-left:  2px solid lightgreen;
+  color: white !important;
+}
+
 /* da dare al contenitore per centrare verticalmente */
 .aline-center {
 display: flex;
 flex-direction: row;
+align-items: center;
+}
+
+.aline-center-column{
+display: flex;
+flex-direction: column;
 align-items: center;
 }
 
@@ -72,7 +84,7 @@ align-items: center;
 
 
 #aside-section {
-  background-color: blue;
+  background-color: #000;
   height: calc(100vh - 89px);
   float: left;
   width: 240px;
@@ -83,7 +95,7 @@ align-items: center;
 
 
 #center-section {
-  background-color: lightblue;
+  background-color: #141922;
   height: calc(100vh - 89px);
   width: calc(100% - 240px);
   float: right;
@@ -92,9 +104,10 @@ align-items: center;
 }
 
 #bottom-section {
-  /* background-color:  #282828; */
+  background-color:  #282828;
   border: red 1px solid;
   height: 89px;
+  /* width: 630px; */
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -102,6 +115,10 @@ align-items: center;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px;
+  overflow: hidden;
+
 }
 
 /* #bottom-section {
@@ -111,7 +128,7 @@ align-items: center;
 /* regole sezioni centrali */
 
 .getpremium {
-  background-color: violet;
+  background-color: rgba(0, 0, 0, 0.5);
   height: 89px;
   width: calc(100% - 240px);
   position: fixed;
@@ -120,10 +137,12 @@ align-items: center;
 }
 
 
+
+
 /* sezione aside */
 
 #menu-aside {
- background-color: lightblue;
+ /* background-color: lightblue; */
  height: 200px;
  width: 95%;
  margin-right: 5%;
@@ -133,7 +152,7 @@ align-items: center;
 }
 
 .menu-aside-logo{
-  background-color: black;
+  /* background-color: black; */
   /* height: 40px; */
   width: 100%;
 }
@@ -265,7 +284,7 @@ margin: 10px 10px;
   margin-left: 8px;
   margin-right: 8px;
   flex-basis: 15%;
-  background-color: lightgrey;
+  background-color: rgba(40, 40, 40, 0.3);
   border-radius: 10px;
   margin-bottom: 10px;
 
@@ -352,6 +371,8 @@ margin: 10px 10px;
 
   }
 
+
+
 }
 
 /* @media screen and (max-width: 570px) {
@@ -369,8 +390,111 @@ margin: 10px 10px;
 }
 /* sezione bottom */
 
+.bottom-section {
+  overflow-x: hidden;
+}
+.left-footer-album {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.left-footer-album-title > *{
+  display: -webkit-box;
+  -webkit-line-clamp:1;
+  -webkit-box-orient:vertical;
+  overflow: hidden;
 
+
+}
+.left-footer-album-icons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.center-footer-bar {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  width: 90%;
+}
+
+.center-footer-player .fas {
+  transform: scale(1.2);
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.center-footer-player .play-btn {
+  transform: scale(2);
+  margin-left: 14px;
+  margin-right: 14px;
+}
+
+.right-footer-volume{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+.right-footer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* border: 2px solid black; */
+  width: 50%;
+}
+
+/* BARRA DI CARICAMENTO */
+.loading-border{
+  margin: 0px 10px;
+  height: 2px;
+  background-color: lightgrey;
+  /* border: 2px solid;
+  border-color: rgba(255, 0, 0, 0.8); */
+  width: 100%;
+}
+
+.loading-body{
+  height: 2px;
+  left: 0px;
+  width: 30%;
+  background-color: green;
+}
+
+/* BARRA VOLUME */
+
+.volume-border{
+    margin-left: 10px;
+   height: 2px;
+    background-color: lightgrey;
+    width: 100%;
+}
+
+.volume-body{
+  height: 2px;
+  width: 30%;
+  background-color: green;
+}
 
 #left-footer {
+max-width: 320px;
+/* border: 2px solid black; */
+}
+#right-footer {
+max-width:  200px;
+}
+#center-footer {
+  /* border: 2px solid black; */
+  width: 50%;
+}
 
+.margin-icon {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.btn {
+  border: 0px black solid;
+  background-color: rgba(255, 0, 0, 0.0);
 }

@@ -1,0 +1,18 @@
+h1,.album h4, .far, .fas {
+  color: white;
+}
+
+.getpremium h4 {
+  color: white;
+}
+
+
+.playlist-aside h4, .addplaylist h4, .album h5, .menu-center-ul h4{
+  color: #666666;
+
+}
+
+.menu-playlist-aside h4  {
+
+  font-weight: bold;
+}
